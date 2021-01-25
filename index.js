@@ -97,7 +97,7 @@ function getUserInput () {
    toWrite += data.contribution != '' ? ('## Contribution' + '\n' + data.contribution + '\n') : ''
    toWrite += data.test != '' ? ('## Test' + '\n' + data.test + '\n') : ''
    toWrite += data.license != '' ? ('## License' + '\n' + data.license + '\n') : ''
-   toWrite += "## Questions?" + '\n' + "For any questions, please contact me @" + data.email + " And visit my github repo https://github.com/" + data.githubusername
+   toWrite += "## Questions?" + '\n' + "For any questions, please contact me @ " + data.email + " And visit my github repo https://github.com/" + data.githubusername
    return toWrite
  }
 // function to write README file
