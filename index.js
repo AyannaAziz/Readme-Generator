@@ -83,7 +83,7 @@ function getUserInput () {
    ${(data.usage != `` ? `* [Usage](#usage)`:"")}
    ${(data.contribution != `` ? `* [Contribution](#contribution)`:"")}
    ${(data.test != `` ? `* [Test](#test)`:"")}
-   * [License] (#license)
+   * [License](#license)
    * [Questions](#questions)
    `
    var toWrite = data.title != '' ? ('# Title' + '\n' + data.title.toUpperCase() + '\n') : ''
@@ -97,7 +97,7 @@ function getUserInput () {
    toWrite += data.contribution != '' ? ('## Contribution' + '\n' + data.contribution + '\n') : ''
    toWrite += data.test != '' ? ('## Test' + '\n' + data.test + '\n') : ''
    toWrite += data.license != '' ? ('## License' + '\n' + data.license + '\n') : ''
-   toWrite += "## Questions?" + '\n' + "For any questions, please contact me at " + data.email + " And visit my github repo " + data.githubusername
+   toWrite += "## Questions?" + '\n' + "For any questions, please contact me @" + data.email + " And visit my github repo https://github.com/" + data.githubusername
    return toWrite
  }
 // function to write README file
