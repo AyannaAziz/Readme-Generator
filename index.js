@@ -83,11 +83,12 @@ function getUserInput () {
    ${(data.usage != `` ? `* [Usage](#usage)`:"")}
    ${(data.contribution != `` ? `* [Contribution](#contribution)`:"")}
    ${(data.test != `` ? `* [Test](#test)`:"")}
-   *[License] (#license)
-   *[Questions] (#questions)
+   * [License] (#license)
+   * [Questions](#questions)
    `
    var toWrite = data.title != '' ? ('# Title' + '\n' + data.title.toUpperCase() + '\n') : ''
    toWrite += "## Badge" + '\n' 
+   toWrite += `[![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-brightgreen.svg)](“https://opensource.org/licenses/MIT”)` + '\n'
   //  toWrite += `![Badge for GitHub](https://img.shields.io/github/languages/top/${data.license}?style=flat&logo=appveyor)` + "\n"
    toWrite += data.description != '' ? ('## Description' + '\n' + data.description + '\n') : ''
    toWrite += tableOfContents + '\n'
