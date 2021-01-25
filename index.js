@@ -77,11 +77,20 @@ function getUserInput () {
     );
 }
  function getData (data){
-   console.log(data.githubusername)
+   var tableOfContents = `## Table of Contents
+   ${(data.description != `` ? `* [Description](#description)`:"")}
+   ${(data.installation != `` ? `* [Installation](#installation)`:"")}
+   ${(data.usage != `` ? `* [Usage](#usage)`:"")}
+   ${(data.contribution != `` ? `* [Contribution](#contribution)`:"")}
+   ${(data.test != `` ? `* [Test](#test)`:"")}
+   *[License] (#license)
+   *[Questions] (#questions)
+   `
    var toWrite = data.title != '' ? ('# Title' + '\n' + data.title.toUpperCase() + '\n') : ''
    toWrite += "## Badge" + '\n' 
   //  toWrite += `![Badge for GitHub](https://img.shields.io/github/languages/top/${data.license}?style=flat&logo=appveyor)` + "\n"
    toWrite += data.description != '' ? ('## Description' + '\n' + data.description + '\n') : ''
+   toWrite += tableOfContents + '\n'
    toWrite += data.installation != '' ? ('## Installation' + '\n' + data.installation + '\n') : ''
    toWrite += data.usage != '' ? ('## Usage' + '\n' + data.usage + '\n') : ''
    toWrite += data.contribution != '' ? ('## Contribution' + '\n' + data.contribution + '\n') : ''
