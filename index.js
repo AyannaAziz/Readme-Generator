@@ -78,13 +78,13 @@ function getUserInput () {
 }
  function getData (data){
    console.log(data.githubusername)
-   var toWrite = data.githubusername != '' ? ('# Title' + '\n' + data.title + '\n') : ''
-   toWrite += data.githubusername != '' ? ('## Description' + '\n' + data.description + '\n') : ''
-   toWrite += data.githubusername != '' ? ('## Installation' + '\n' + data.installation + '\n') : ''
-   toWrite += data.githubusername != '' ? ('## Usage' + '\n' + data.usage + '\n') : ''
-   toWrite += data.githubusername != '' ? ('## Contribution' + '\n' + data.contribution + '\n') : ''
-   toWrite += data.githubusername != '' ? ('## Test' + '\n' + data.test + '\n') : ''
-   toWrite += data.githubusername != '' ? ('## License' + '\n' + data.license + '\n') : ''
+   var toWrite = data.title != '' ? ('# Title' + '\n' + data.title + '\n') : ''
+   toWrite += data.description != '' ? ('## Description' + '\n' + data.description + '\n') : ''
+   toWrite += data.installation != '' ? ('## Installation' + '\n' + data.installation + '\n') : ''
+   toWrite += data.usage != '' ? ('## Usage' + '\n' + data.usage + '\n') : ''
+   toWrite += data.contribution != '' ? ('## Contribution' + '\n' + data.contribution + '\n') : ''
+   toWrite += data.test != '' ? ('## Test' + '\n' + data.test + '\n') : ''
+   toWrite += data.license != '' ? ('## License' + '\n' + data.license + '\n') : ''
    toWrite += "## Question" + '\n' + "For any questions, please contact me at " + data.email + " And visit my github repo " + data.githubusername
    return toWrite
  }
