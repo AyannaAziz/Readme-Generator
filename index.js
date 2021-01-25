@@ -78,14 +78,16 @@ function getUserInput () {
 }
  function getData (data){
    console.log(data.githubusername)
-   var toWrite = data.title != '' ? ('# Title' + '\n' + data.title + '\n') : ''
+   var toWrite = data.title != '' ? ('# Title' + '\n' + data.title.toUpperCase() + '\n') : ''
+   toWrite += "## Badge" + '\n' 
+  //  toWrite += `![Badge for GitHub](https://img.shields.io/github/languages/top/${data.license}?style=flat&logo=appveyor)` + "\n"
    toWrite += data.description != '' ? ('## Description' + '\n' + data.description + '\n') : ''
    toWrite += data.installation != '' ? ('## Installation' + '\n' + data.installation + '\n') : ''
    toWrite += data.usage != '' ? ('## Usage' + '\n' + data.usage + '\n') : ''
    toWrite += data.contribution != '' ? ('## Contribution' + '\n' + data.contribution + '\n') : ''
    toWrite += data.test != '' ? ('## Test' + '\n' + data.test + '\n') : ''
    toWrite += data.license != '' ? ('## License' + '\n' + data.license + '\n') : ''
-   toWrite += "## Question" + '\n' + "For any questions, please contact me at " + data.email + " And visit my github repo " + data.githubusername
+   toWrite += "## Questions?" + '\n' + "For any questions, please contact me at " + data.email + " And visit my github repo " + data.githubusername
    return toWrite
  }
 // function to write README file
