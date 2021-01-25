@@ -20,42 +20,42 @@ function getUserInput () {
         message: 'What is your Github user name?',
         name: 'githubusername',
       },
-      // {
-      //   type: 'input',
-      //   message: 'What is your email?',
-      //   name: 'email',
-      // },
+      {
+        type: 'input',
+        message: 'What is your email?',
+        name: 'email',
+      },
       
-      // {
-      //   type: 'input',
-      //   message: 'Enter the title of your project.',
-      //   name: 'title',
-      // },
-      // {
-      //   type: 'input',
-      //   message: 'Enter the description of your project.',
-      //   name: 'description',
-      // },
-      // {
-      //   type: 'input',
-      //   message: 'Enter the installation instructions  of your project.',
-      //   name: 'installation',
-      // },
-      // {
-      //   type: 'input',
-      //   message: 'Enter the usage information of your project.',
-      //   name: 'usage',
-      // },
-      // {
-      //   type: 'input',
-      //   message: 'Enter the contribution guidlines of your project.',
-      //   name: 'contribution',
-      // },
-      // {
-      //   type: 'input',
-      //   message: 'Enter the test instructions for your project.',
-      //   name: 'test',
-      // },
+      {
+        type: 'input',
+        message: 'Enter the title of your project.',
+        name: 'title',
+      },
+      {
+        type: 'input',
+        message: 'Enter the description of your project.',
+        name: 'description',
+      },
+      {
+        type: 'input',
+        message: 'Enter the installation instructions  of your project.',
+        name: 'installation',
+      },
+      {
+        type: 'input',
+        message: 'Enter the usage information of your project.',
+        name: 'usage',
+      },
+      {
+        type: 'input',
+        message: 'Enter the contribution guidlines of your project.',
+        name: 'contribution',
+      },
+      {
+        type: 'input',
+        message: 'Enter the test instructions for your project.',
+        name: 'test',
+      },
       {
         type: 'list',
         message: 'Choose the type of license.',
@@ -78,7 +78,14 @@ function getUserInput () {
 }
  function getData (data){
    console.log(data.githubusername)
-   const toWrite = data.githubusername != '' ? ('## githubusername' + '\n' + data.githubusername) : ''
+   var toWrite = data.githubusername != '' ? ('# Title' + '\n' + data.title + '\n') : ''
+   toWrite += data.githubusername != '' ? ('## Description' + '\n' + data.description + '\n') : ''
+   toWrite += data.githubusername != '' ? ('## Installation' + '\n' + data.installation + '\n') : ''
+   toWrite += data.githubusername != '' ? ('## Usage' + '\n' + data.usage + '\n') : ''
+   toWrite += data.githubusername != '' ? ('## Contribution' + '\n' + data.contribution + '\n') : ''
+   toWrite += data.githubusername != '' ? ('## Test' + '\n' + data.test + '\n') : ''
+   toWrite += data.githubusername != '' ? ('## License' + '\n' + data.license + '\n') : ''
+   toWrite += "## Question" + '\n' + "For any questions, please contact me at " + data.email + " And visit my github repo " + data.githubusername
    return toWrite
  }
 // function to write README file
