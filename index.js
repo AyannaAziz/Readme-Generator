@@ -66,7 +66,8 @@ function getUserInput () {
     ])
     .then((response) => {
        // response.confirm === response.password
-       const data = response.githubusername + "\n" + response.license 
+       console.log(response.githubusername)
+       const data = getData(response) 
       
        writeToFile('./utils/ReadMe.md', data)
        //  console.log('Success!')
@@ -75,7 +76,11 @@ function getUserInput () {
      
     );
 }
-
+ function getData (data){
+   console.log(data.githubusername)
+   const toWrite = data.githubusername != '' ? ('## githubusername' + '\n' + data.githubusername) : ''
+   return toWrite
+ }
 // function to write README file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) =>
