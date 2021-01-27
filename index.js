@@ -86,7 +86,8 @@ function getUserInput () {
    * [License](#license)
    * [Questions](#questions)
    `
-   var toWrite = data.title != '' ? ('# Title' + '\n' + data.title.toUpperCase() + '\n') : ''
+
+   var toWrite = data.title != '' ? ('## '+ data.title.toUpperCase() + '\n' +  '\n') : ''
    toWrite += "## Badge" + '\n' 
    toWrite += `[![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-brightgreen.svg)](“https://opensource.org/licenses/MIT”)` + '\n'
   //  toWrite += `![Badge for GitHub](https://img.shields.io/github/languages/top/${data.license}?style=flat&logo=appveyor)` + "\n"
