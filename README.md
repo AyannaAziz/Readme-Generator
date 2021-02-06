@@ -30,7 +30,7 @@ The ReadME Generator is a node.js application that uses the inquirer package to 
 Click this link into your browser to see the video demo of this application.
 * https://drive.google.com/file/d/18vy3lJc2wXZIWMOlQuvhQSx1iKIadQtC/preview
 
-<iframe src="https://drive.google.com/file/d/18vy3lJc2wXZIWMOlQuvhQSx1iKIadQtC/preview" width="640" height="480"></iframe>
+
 
 
 ## Challenges 
