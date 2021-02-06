@@ -1,49 +1,45 @@
-## Weather-Dashboard
-ReadMe Generator is a command line application that allows a user to enter information about a GitHub project and then easily generate a professional and organized Readme.  
+# <center> ReadMe Generator Using Node.js </center>
 
 ## Description
-The server-side API used to get response data object is retrieved from the Open Weather APi. The current weather section includes the following weather attributes and date.
+The ReadME Generator is a node.js application that uses the inquirer package to create a CLI tool to recieve user input and easily generate a professional and organized ReadME for a project. The application asks the user the following questions to generate a polished readme.
 
-* City, Date, Icon image
-* Temperature
-* Humidity
-* Wind Speed
-* UV index
+- What is your Github user name?
+- What is your email?
+- Enter the title of your project.
+- Enter the description of your project.
+- Enter the installation instructions  of your project.
+- Enter the usage information of your project.
+- Enter the contribution guidlines of your project.
+- Enter the test instructions for your project.
+- Choose the type of license.
 
-The 5-days weather forecast includes the following information for each day:
-
-* Date
-* Icon image
-* Temperature
-* Humidity
-
-The local storage is used to store the previously searched cities and display them to the user in the left side of the page under the search bar.
+## Table of Contents
+* [Description](#Description)
+* [Built With](#built-with)
+* [Demo](#demo)
+* [Authors](#authors)
+* [License](#license)
 
 ## Built With
 * HTML
 * CSS
-* JQuery
-* Open Weather API
+* Javascript
+* Node.js
 
 ## Demo
-![](weatherdemo.png)
+Click this link into your browser to see the video demo of this application.
+* https://drive.google.com/file/d/18vy3lJc2wXZIWMOlQuvhQSx1iKIadQtC/preview
+
+<iframe src="https://drive.google.com/file/d/18vy3lJc2wXZIWMOlQuvhQSx1iKIadQtC/preview" width="640" height="480"></iframe>
+
 
 ## Challenges 
-In order to get all the information needed, a good deal of manipulation of the response from the get request was needed, including taking information from one response to generate a new request. For example, the search based on city name returns latitude and longitude coordinates, and these coordinates are used in the UV Index get request.
+This particular application was pretty straightforward once I understood how inquirer works. The next logical concept I had to grasp was how I should capture the responses and where the responses were being rendered. Another aspect that was particularly challenging was getting the badge to show for the licensing. However after some expert level Googling I was able to find a syntax that worked. 
 
 ## Authors
 Alma Aziz
 
-## Link
-Visit the website here: https://ayannaaziz.github.io/-Weather-Dashboard/
-
-## References
-These videos/articles were helpful in helping me get started and complete the app.
-
-* https://stackoverflow.com/questions/56070796/show-day-name-instead-of-number-from-open-weather-api-response
-* https://code-projects.org/weather-dashboard-in-javascript-with-source-code/
-
-  ## MIT License
+## MIT License
 
 Copyright (c) 2021 Ayanna Aziz
 

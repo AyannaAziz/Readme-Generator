@@ -66,7 +66,7 @@ function getUserInput () {
     ])
     .then((response) => {
     
-       console.log(response.githubusername)
+    
        const data = getData(response) 
       
        writeToFile('./utils/ReadMe.md', data)
@@ -85,10 +85,9 @@ function getUserInput () {
    * [Questions](#questions)
    `
 
-   var toWrite = data.title != '' ? ('## '+ data.title.toUpperCase() + '\n' +  '\n') : ''
-  //  toWrite += "## Badge" + '\n' 
+   let toWrite = data.title != '' ? ('## '+ data.title.toUpperCase() + '\n' +  '\n') : ''
+
    toWrite += `[![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-brightgreen.svg)](“https://opensource.org/licenses/MIT”)` + '\n'
-  //  toWrite += `![Badge for GitHub](https://img.shields.io/github/languages/top/${data.license}?style=flat&logo=appveyor)` + "\n"
    toWrite += data.description != '' ? ('## Description' + '\n' + data.description + '\n') : ''
    toWrite += tableOfContents + '\n'
    toWrite += data.installation != '' ? ('## Installation' + '\n' + data.installation + '\n') : ''
